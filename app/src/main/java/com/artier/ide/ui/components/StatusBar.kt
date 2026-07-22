@@ -33,7 +33,7 @@ fun StatusBar(
         modifier = modifier
             .fillMaxWidth()
             .height(24.dp)
-            .background(ArtierColors.primaryContainer)
+            .background(ArtierColors.surfaceCharcoal)
             .drawBehind {
                 // Top border
                 drawLine(

@@ -206,6 +206,6 @@ private fun getFileIconColor(filePath: String): androidx.compose.ui.graphics.Col
         "html" -> com.artier.ide.ui.theme.FileIconHtml
         "css" -> com.artier.ide.ui.theme.FileIconCss
         "md" -> com.artier.ide.ui.theme.FileIconMarkdown
-        else -> MaterialTheme.colorScheme.onSurfaceVariant
+        else -> androidx.compose.ui.graphics.Color.Gray
     }
 }

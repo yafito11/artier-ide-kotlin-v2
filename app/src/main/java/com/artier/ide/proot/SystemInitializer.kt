@@ -212,7 +212,7 @@ class SystemInitializer(private val context: Context) {
             prootReady = prootManager.isInitialized,
             daemonRunning = daemonManager.isRunning,
             daemonStatus = daemonStatus,
-            nodeAvailable = prootManager.isNodeAvailable(),
+            nodeAvailable = false, // Will be checked asynchronously
             diskUsage = prootManager.getDiskUsage(),
             prootVersion = "checking...",
             nodeVersion = "checking..."
