@@ -1,0 +1,23 @@
+﻿2026-07-22T11:55:15.4526052Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-22T11:55:15.4527343Z ##[group]Run actions/upload-artifact@v4
+2026-07-22T11:55:15.4527609Z with:
+2026-07-22T11:55:15.4527800Z   name: unit-test-results
+2026-07-22T11:55:15.4528044Z   path: app/build/reports/tests/
+2026-07-22T11:55:15.4528295Z   retention-days: 30
+2026-07-22T11:55:15.4528507Z   if-no-files-found: warn
+2026-07-22T11:55:15.4528726Z   compression-level: 6
+2026-07-22T11:55:15.4528929Z   overwrite: false
+2026-07-22T11:55:15.4529134Z   include-hidden-files: false
+2026-07-22T11:55:15.4529551Z env:
+2026-07-22T11:55:15.4529841Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-22T11:55:15.4530327Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-22T11:55:15.4530768Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-07-22T11:55:15.4531074Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-07-22T11:55:15.4531358Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-07-22T11:55:15.4531779Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-07-22T11:55:15.4532719Z   DEVELOCITY_AUTO_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-07-22T11:55:15.4533091Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-07-22T11:55:15.4533344Z ##[endgroup]
+2026-07-22T11:55:15.6156167Z (node:2614) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-22T11:55:15.6157468Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-22T11:55:15.6176183Z ##[warning]No files were found with the provided path: app/build/reports/tests/. No artifacts will be uploaded.

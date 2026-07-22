@@ -1,0 +1,8 @@
+2026-07-22T11:53:43.1270000Z Evaluating unit-tests.if
+2026-07-22T11:53:43.1270000Z Evaluating: success()
+2026-07-22T11:53:43.1270000Z Result: true
+2026-07-22T11:53:43.1280000Z Requested labels: ubuntu-latest
+2026-07-22T11:53:43.1280000Z Job defined at: yafito11/artier-ide-kotlin-v2/.github/workflows/test.yml@refs/heads/main
+2026-07-22T11:53:43.1280000Z Waiting for a runner to pick up this job...
+2026-07-22T11:53:43.6230000Z Job is about to start running on the hosted runner: GitHub Actions 1000000005
+2026-07-22T11:53:43.6230000Z Job is waiting for a hosted runner to come online.

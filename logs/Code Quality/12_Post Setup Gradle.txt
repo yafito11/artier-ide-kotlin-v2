@@ -1,0 +1,37 @@
+﻿2026-07-22T11:55:16.7111310Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-22T11:55:16.7112919Z Post job cleanup.
+2026-07-22T11:55:16.8711522Z In post-action step
+2026-07-22T11:55:16.8717948Z Stopping all Gradle daemons before saving Gradle User Home state
+2026-07-22T11:55:16.8719317Z Stopping Gradle daemons for /home/runner/.gradle/wrapper/dists/gradle-8.2-bin/bbg7u40eoinfdyxsxr3z4i7ta/gradle-8.2
+2026-07-22T11:55:16.8728593Z (node:2422) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-22T11:55:16.8729946Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-22T11:55:16.8734706Z [command]/home/runner/.gradle/wrapper/dists/gradle-8.2-bin/bbg7u40eoinfdyxsxr3z4i7ta/gradle-8.2/bin/gradle --stop
+2026-07-22T11:55:17.8488709Z Stopping Daemon(s)
+2026-07-22T11:55:17.8630441Z 1 Daemon stopped
+2026-07-22T11:55:17.8829090Z ##[group]Caching Gradle state
+2026-07-22T11:55:17.9030572Z Caching generated-gradle-jars with path '/home/runner/.gradle/caches/8.2/generated-gradle-jars/gradle-api-8.2.jar' and cache key: gradle-generated-gradle-jars-v1-5f6a8613b478fd816378c9834ad14e25
+2026-07-22T11:55:17.9039581Z Caching generated-gradle-jars with path '/home/runner/.gradle/caches/8.2/generated-gradle-jars/gradle-kotlin-dsl-extensions-8.2.jar' and cache key: gradle-generated-gradle-jars-v1-688225baeac4a3a51a617774fb1fe1f4
+2026-07-22T11:55:17.9057595Z Caching wrapper-zips with path '/home/runner/.gradle/wrapper/dists/gradle-8.2-bin/bbg7u40eoinfdyxsxr3z4i7ta' and cache key: gradle-wrapper-zips-v1-d75ab2e302ad9e0b00dcd53244709342
+2026-07-22T11:55:17.9240543Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2 --files-from manifest.txt --use-compress-program zstdmt
+2026-07-22T11:55:17.9241942Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2 --files-from manifest.txt --use-compress-program zstdmt
+2026-07-22T11:55:17.9284629Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2 --files-from manifest.txt --use-compress-program zstdmt
+2026-07-22T11:55:18.0234470Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/8.2/generated-gradle-jars/gradle-kotlin-dsl-extensions-8.2.jar' and key: gradle-generated-gradle-jars-v1-688225baeac4a3a51a617774fb1fe1f4: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0pq9gagAAAAAxbkXI3/2tTbNIzzYeNAtpUEhYMzFFREdFMDYxMQBFZGdl
+2026-07-22T11:55:18.5551555Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/wrapper/dists/gradle-8.2-bin/bbg7u40eoinfdyxsxr3z4i7ta' and key: gradle-wrapper-zips-v1-d75ab2e302ad9e0b00dcd53244709342: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0pq9gagAAAADUt7ptqgrRTK2gYaiqWDC2UEhYMzFFREdFMDYxMABFZGdl
+2026-07-22T11:55:18.6128166Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/8.2/generated-gradle-jars/gradle-api-8.2.jar' and key: gradle-generated-gradle-jars-v1-5f6a8613b478fd816378c9834ad14e25: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0pq9gagAAAADGBmv0DjkxQZEQtd1DGxgFUEhYMzFFREdFMDYxMQBFZGdl
+2026-07-22T11:55:18.6410279Z Caching dependencies with path '/home/runner/.gradle/caches/modules-*/files-*/*/*/*/*' and cache key: gradle-dependencies-v1-4754f6f23ba917c2271d26f45e471af2
+2026-07-22T11:55:18.6734165Z Caching instrumented-jars with path '/home/runner/.gradle/caches/jars-*/*/' and cache key: gradle-instrumented-jars-v1-6e6780df29b5b74cdc03f95bee90f511
+2026-07-22T11:55:18.6846228Z Caching kotlin-dsl with path '/home/runner/.gradle/caches/*/kotlin-dsl/accessors/*/
+2026-07-22T11:55:18.6847088Z /home/runner/.gradle/caches/*/kotlin-dsl/scripts/*/' and cache key: gradle-kotlin-dsl-v1-4c10b64927e32e86dc55421e1d9ea80f
+2026-07-22T11:55:18.7074260Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2 --files-from manifest.txt --use-compress-program zstdmt
+2026-07-22T11:55:18.7374961Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2 --files-from manifest.txt --use-compress-program zstdmt
+2026-07-22T11:55:18.7967452Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/*/kotlin-dsl/accessors/*/
+/home/runner/.gradle/caches/*/kotlin-dsl/scripts/*/' and key: gradle-kotlin-dsl-v1-4c10b64927e32e86dc55421e1d9ea80f: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0pq9gagAAAAC0J3TheIxkSa2kpeP2zsxaUEhYMzFFREdFMDUwNwBFZGdl
+2026-07-22T11:55:18.9192300Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2 --files-from manifest.txt --use-compress-program zstdmt
+2026-07-22T11:55:19.6658816Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/modules-*/files-*/*/*/*/*' and key: gradle-dependencies-v1-4754f6f23ba917c2271d26f45e471af2: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0p69gagAAAAAM2FkhTCCXQ7tQx8APmizXUEhYMzFFREdFMDUxNQBFZGdl
+2026-07-22T11:55:19.8759318Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/jars-*/*/' and key: gradle-instrumented-jars-v1-6e6780df29b5b74cdc03f95bee90f511: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0p69gagAAAABZ3f49qucCRa0c2fVpGxRmUEhYMzFFREdFMDIxNwBFZGdl
+2026-07-22T11:55:19.9259493Z Caching Gradle User Home with cache key: gradle-home-v1|Linux|lint[dd0abc8a5b671e61329bd9298d35af1f]-82dd7100cc96900464fbcbdc14ee407dbde5c7c9
+2026-07-22T11:55:19.9331603Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2 --files-from manifest.txt --use-compress-program zstdmt
+2026-07-22T11:55:20.2521087Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches,/home/runner/.gradle/notifications,/home/runner/.gradle/.setup-gradle' and key: gradle-home-v1|Linux|lint[dd0abc8a5b671e61329bd9298d35af1f]-82dd7100cc96900464fbcbdc14ee407dbde5c7c9: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0qK9gagAAAAAzldYRw9S9Qbf1JQMqBHcUUEhYMzFFREdFMDUxOABFZGdl
+2026-07-22T11:55:20.2525288Z ##[endgroup]
+2026-07-22T11:55:20.2527060Z Generating Job Summary
+2026-07-22T11:55:20.2537751Z Completed post-action step

@@ -1,0 +1,72 @@
+﻿2026-07-22T11:53:49.1693390Z ##[group]Run ./gradlew test --no-daemon
+2026-07-22T11:53:49.1693792Z [36;1m./gradlew test --no-daemon[0m
+2026-07-22T11:53:49.1749058Z shell: /usr/bin/bash -e {0}
+2026-07-22T11:53:49.1749338Z env:
+2026-07-22T11:53:49.1749657Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-22T11:53:49.1750179Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-22T11:53:49.1750612Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-07-22T11:53:49.1750954Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-07-22T11:53:49.1751264Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-07-22T11:53:49.1751706Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-07-22T11:53:49.1752513Z   DEVELOCITY_AUTO_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-07-22T11:53:49.1752862Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-07-22T11:53:49.1753137Z ##[endgroup]
+2026-07-22T11:53:49.1919235Z ./gradlew: 2: eval: --no-daemon: not found
+2026-07-22T11:53:49.5370982Z Downloading https://services.gradle.org/distributions/gradle-8.2-bin.zip
+2026-07-22T11:53:51.8702850Z ............10%............20%............30%.............40%............50%............60%............70%.............80%............90%............100%
+2026-07-22T11:53:53.0380934Z 
+2026-07-22T11:53:53.0384072Z Welcome to Gradle 8.2!
+2026-07-22T11:53:53.0384669Z 
+2026-07-22T11:53:53.0385233Z Here are the highlights of this release:
+2026-07-22T11:53:53.0396412Z  - Kotlin DSL: new reference documentation, assignment syntax by default
+2026-07-22T11:53:53.0397699Z  - Kotlin DSL is now the default with Gradle init
+2026-07-22T11:53:53.0399765Z  - Improved suggestions to resolve errors in console output
+2026-07-22T11:53:53.0400547Z 
+2026-07-22T11:53:53.0401879Z For more details see https://docs.gradle.org/8.2/release-notes.html
+2026-07-22T11:53:53.0403055Z 
+2026-07-22T11:53:53.2396653Z Starting a Gradle Daemon (subsequent builds will be faster)
+2026-07-22T11:54:56.0397223Z WARNING: We recommend using a newer Android Gradle plugin to use compileSdk = 34
+2026-07-22T11:54:56.0398213Z 
+2026-07-22T11:54:56.0412836Z This Android Gradle plugin (8.1.0) was tested up to compileSdk = 33 (and compileSdkPreview = "UpsideDownCakePrivacySandbox").
+2026-07-22T11:54:56.0433031Z 
+2026-07-22T11:54:56.0454383Z You are strongly encouraged to update your project to use a newer
+2026-07-22T11:54:56.0459503Z Android Gradle plugin that has been tested with compileSdk = 34.
+2026-07-22T11:54:56.0460223Z 
+2026-07-22T11:54:56.0462202Z If you are already using the latest version of the Android Gradle plugin,
+2026-07-22T11:54:56.0471207Z you may need to wait until a newer version with support for compileSdk = 34 is available.
+2026-07-22T11:54:56.0472397Z 
+2026-07-22T11:54:56.0473745Z To suppress this warning, add/update
+2026-07-22T11:54:56.0474930Z     android.suppressUnsupportedCompileSdk=34
+2026-07-22T11:54:56.0475525Z to this project's gradle.properties.
+2026-07-22T11:54:57.4372867Z Checking the license for package Android SDK Build-Tools 33.0.1 in /usr/local/lib/android/sdk/licenses
+2026-07-22T11:54:57.4374602Z License for package Android SDK Build-Tools 33.0.1 accepted.
+2026-07-22T11:54:57.4375576Z Preparing "Install Android SDK Build-Tools 33.0.1 v.33.0.1".
+2026-07-22T11:54:58.7373679Z "Install Android SDK Build-Tools 33.0.1 v.33.0.1" ready.
+2026-07-22T11:54:58.7375626Z Installing Android SDK Build-Tools 33.0.1 in /usr/local/lib/android/sdk/build-tools/33.0.1
+2026-07-22T11:54:58.7377124Z "Install Android SDK Build-Tools 33.0.1 v.33.0.1" complete.
+2026-07-22T11:54:59.0369877Z "Install Android SDK Build-Tools 33.0.1 v.33.0.1" finished.
+2026-07-22T11:54:59.7382082Z > Task :app:preBuild UP-TO-DATE
+2026-07-22T11:54:59.7383590Z > Task :app:preDebugBuild UP-TO-DATE
+2026-07-22T11:55:13.9370024Z > Task :app:generateDebugResValues
+2026-07-22T11:55:13.9371239Z > Task :app:checkDebugAarMetadata
+2026-07-22T11:55:14.1382973Z > Task :app:mapDebugSourceSetPaths
+2026-07-22T11:55:14.1412900Z > Task :app:generateDebugResources
+2026-07-22T11:55:14.9387306Z 
+2026-07-22T11:55:14.9403001Z ERROR: /home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2/app/src/main/res/font/Inter-SemiBold.ttf: Resource and asset merger: 'I' is not a valid file-based resource name character: File-based resource names must contain only lowercase a-z, 0-9, or underscore
+2026-07-22T11:55:14.9405031Z > Task :app:mergeDebugResources FAILED
+2026-07-22T11:55:14.9420966Z 4 actionable tasks: 4 executed
+2026-07-22T11:55:14.9434417Z 
+2026-07-22T11:55:14.9462713Z FAILURE: Build failed with an exception.
+2026-07-22T11:55:14.9473197Z 
+2026-07-22T11:55:14.9473590Z * What went wrong:
+2026-07-22T11:55:14.9474243Z Execution failed for task ':app:mergeDebugResources'.
+2026-07-22T11:55:14.9476290Z > /home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2/app/src/main/res/font/Inter-SemiBold.ttf: Error: 'I' is not a valid file-based resource name character: File-based resource names must contain only lowercase a-z, 0-9, or underscore
+2026-07-22T11:55:14.9478084Z 
+2026-07-22T11:55:14.9478394Z * Try:
+2026-07-22T11:55:14.9479029Z > Run with --stacktrace option to get the stack trace.
+2026-07-22T11:55:14.9479848Z > Run with --info or --debug option to get more log output.
+2026-07-22T11:55:14.9480600Z > Run with --scan to get full insights.
+2026-07-22T11:55:14.9481311Z > Get more help at https://help.gradle.org.
+2026-07-22T11:55:14.9481840Z 
+2026-07-22T11:55:14.9482388Z BUILD FAILED in 1m 25s
+2026-07-22T11:55:15.4462322Z ##[error]Process completed with exit code 1.

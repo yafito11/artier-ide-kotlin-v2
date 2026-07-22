@@ -1,0 +1,74 @@
+﻿2026-07-22T11:53:47.6322683Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-22T11:53:47.6334501Z ##[group]Run actions/checkout@v4
+2026-07-22T11:53:47.6335956Z with:
+2026-07-22T11:53:47.6337136Z   repository: yafito11/artier-ide-kotlin-v2
+2026-07-22T11:53:47.6346367Z   token: ***
+2026-07-22T11:53:47.6347400Z   ssh-strict: true
+2026-07-22T11:53:47.6348457Z   ssh-user: git
+2026-07-22T11:53:47.6349451Z   persist-credentials: true
+2026-07-22T11:53:47.6350624Z   clean: true
+2026-07-22T11:53:47.6351621Z   sparse-checkout-cone-mode: true
+2026-07-22T11:53:47.6353169Z   fetch-depth: 1
+2026-07-22T11:53:47.6354385Z   fetch-tags: false
+2026-07-22T11:53:47.6355389Z   show-progress: true
+2026-07-22T11:53:47.6356452Z   lfs: false
+2026-07-22T11:53:47.6357414Z   submodules: false
+2026-07-22T11:53:47.6358609Z   set-safe-directory: true
+2026-07-22T11:53:47.6359754Z   allow-unsafe-pr-checkout: false
+2026-07-22T11:53:47.6361319Z ##[endgroup]
+2026-07-22T11:53:47.7420307Z Syncing repository: yafito11/artier-ide-kotlin-v2
+2026-07-22T11:53:47.7424859Z ##[group]Getting Git version info
+2026-07-22T11:53:47.7427405Z Working directory is '/home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2'
+2026-07-22T11:53:47.7430560Z [command]/usr/bin/git version
+2026-07-22T11:53:47.7521841Z git version 2.54.0
+2026-07-22T11:53:47.7555452Z ##[endgroup]
+2026-07-22T11:53:47.7575366Z Temporarily overriding HOME='/home/runner/work/_temp/d056b179-5927-43c7-a701-ad2fac36828d' before making global git config changes
+2026-07-22T11:53:47.7580795Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-22T11:53:47.7586378Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2
+2026-07-22T11:53:47.7648707Z Deleting the contents of '/home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2'
+2026-07-22T11:53:47.7653929Z ##[group]Initializing the repository
+2026-07-22T11:53:47.7660327Z [command]/usr/bin/git init /home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2
+2026-07-22T11:53:47.7799714Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-22T11:53:47.7893697Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-22T11:53:47.7898609Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-22T11:53:47.7901262Z hint: call:
+2026-07-22T11:53:47.7902940Z hint:
+2026-07-22T11:53:47.7904664Z hint: 	git config --global init.defaultBranch <name>
+2026-07-22T11:53:47.7906728Z hint:
+2026-07-22T11:53:47.7911383Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-22T11:53:47.7915144Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-22T11:53:47.7917652Z hint:
+2026-07-22T11:53:47.7919049Z hint: 	git branch -m <name>
+2026-07-22T11:53:47.7920625Z hint:
+2026-07-22T11:53:47.7922853Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-22T11:53:47.7925909Z Initialized empty Git repository in /home/runner/work/artier-ide-kotlin-v2/artier-ide-kotlin-v2/.git/
+2026-07-22T11:53:47.7929895Z [command]/usr/bin/git remote add origin https://github.com/yafito11/artier-ide-kotlin-v2
+2026-07-22T11:53:47.7934592Z ##[endgroup]
+2026-07-22T11:53:47.7936867Z ##[group]Disabling automatic garbage collection
+2026-07-22T11:53:47.7938988Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-22T11:53:47.8000947Z ##[endgroup]
+2026-07-22T11:53:47.8004158Z ##[group]Setting up auth
+2026-07-22T11:53:47.8024021Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-22T11:53:47.8030087Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-22T11:53:47.8438365Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-22T11:53:47.8474100Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-22T11:53:47.8707112Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-22T11:53:47.8745732Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-22T11:53:47.8980423Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-22T11:53:47.9022722Z ##[endgroup]
+2026-07-22T11:53:47.9025611Z ##[group]Fetching the repository
+2026-07-22T11:53:47.9035270Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +82dd7100cc96900464fbcbdc14ee407dbde5c7c9:refs/remotes/origin/main
+2026-07-22T11:53:48.3379430Z From https://github.com/yafito11/artier-ide-kotlin-v2
+2026-07-22T11:53:48.3380471Z  * [new ref]         82dd7100cc96900464fbcbdc14ee407dbde5c7c9 -> origin/main
+2026-07-22T11:53:48.3418958Z ##[endgroup]
+2026-07-22T11:53:48.3419647Z ##[group]Determining the checkout info
+2026-07-22T11:53:48.3421675Z ##[endgroup]
+2026-07-22T11:53:48.3428075Z [command]/usr/bin/git sparse-checkout disable
+2026-07-22T11:53:48.3481679Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-22T11:53:48.3514380Z ##[group]Checking out the ref
+2026-07-22T11:53:48.3519884Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-07-22T11:53:48.3820759Z Switched to a new branch 'main'
+2026-07-22T11:53:48.3823063Z branch 'main' set up to track 'origin/main'.
+2026-07-22T11:53:48.3834682Z ##[endgroup]
+2026-07-22T11:53:48.3893656Z [command]/usr/bin/git log -1 --format=%H
+2026-07-22T11:53:48.3923979Z 82dd7100cc96900464fbcbdc14ee407dbde5c7c9
