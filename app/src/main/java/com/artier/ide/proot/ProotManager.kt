@@ -427,12 +427,12 @@ class ProotManager(private val context: Context) {
     private fun verifyInstallation(): Boolean {
         // Check essential files exist
         val essentialFiles = listOf(
-            prootBinaryPath,
+            File(prootBinaryPath),
             File(rootfsPath, "etc/passwd"),
             File(rootfsPath, "usr/bin/$NODE_BINARY")
         )
         
-        val missing = essentialFiles.filter { !File(it).exists() }
+        val missing = essentialFiles.filter { !it.exists() }
         if (missing.isNotEmpty()) {
             Log.w(TAG, "Missing essential files: $missing")
             // Continue anyway - placeholders should be in place

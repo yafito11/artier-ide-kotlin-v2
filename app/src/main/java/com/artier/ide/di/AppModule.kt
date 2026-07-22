@@ -106,8 +106,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideChatRepository(): ChatRepository {
-        return ChatRepository()
+    fun provideChatRepository(webSocketClient: WebSocketClient): ChatRepository {
+        return ChatRepository(webSocketClient)
     }
 
     @Provides

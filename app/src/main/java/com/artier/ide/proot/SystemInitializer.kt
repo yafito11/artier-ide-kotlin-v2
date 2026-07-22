@@ -51,22 +51,7 @@ class SystemInitializer(private val context: Context) {
             _currentStep.value = "Extracting Linux environment..."
             addLog("Step 1/4: Initializing proot environment...", LogLevel.INFO)
             
-            prootManager.state.collect { prootState ->
-                when (prootState) {
-                    is ProotState.Initializing -> {
-                        _progress.value = prootManager.progress.value * 0.3f
-                    }
-                    is ProotState.Ready -> {
-                        _progress.value = 0.3f
-                    }
-                    is ProotState.Error -> {
-                        _state.value = SystemState.Error("Proot initialization failed: ${prootState.message}")
-                        return@withContext false
-                    }
-                    else -> {}
-                }
-            }
-            
+            // Start proot initialization
             if (!prootManager.initialize()) {
                 _state.value = SystemState.Error("Failed to initialize proot")
                 return@withContext false
@@ -90,22 +75,6 @@ class SystemInitializer(private val context: Context) {
             _currentStep.value = "Starting daemon server..."
             addLog("Step 3/4: Starting daemon server...", LogLevel.INFO)
             _progress.value = 0.65f
-            
-            daemonManager.state.collect { daemonState ->
-                when (daemonState) {
-                    is DaemonState.Starting -> {
-                        _progress.value = 0.7f
-                    }
-                    is DaemonState.Running -> {
-                        _progress.value = 0.8f
-                    }
-                    is DaemonState.Error -> {
-                        _state.value = SystemState.Error("Daemon start failed: ${daemonState.message}")
-                        return@withContext false
-                    }
-                    else -> {}
-                }
-            }
             
             if (!daemonManager.start()) {
                 _state.value = SystemState.Error("Failed to start daemon")
