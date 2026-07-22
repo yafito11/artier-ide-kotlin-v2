@@ -25,6 +25,7 @@ import com.artier.ide.ui.skills.SkillPanel
 import com.artier.ide.ui.database.DatabasePanel
 import com.artier.ide.ui.canvas.CanvasViewModel
 import com.artier.ide.ui.canvas.WorkspaceCanvas
+import com.artier.ide.data.model.RouterStatus
 import com.artier.ide.ui.theme.ArtierColors
 import com.artier.ide.ui.theme.InterFontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -198,11 +199,11 @@ fun WorkspaceScreen(
             
             StatusBar(
                 activeFileName = editorTabs.find { it.id == activeTabId }?.filePath,
-                cursorLine = editorTabs.find { it.id == activeTabId }?.cursorLine ?: 1,
-                cursorColumn = editorTabs.find { it.id == activeTabId }?.cursorColumn ?: 1,
+                cursorLine = editorTabs.find { it.id == activeTabId }?.cursorPosition?.line ?: 1,
+                cursorColumn = editorTabs.find { it.id == activeTabId }?.cursorPosition?.column ?: 1,
                 language = editorTabs.find { it.id == activeTabId }?.filePath
                     ?.substringAfterLast('.', "txt")?.uppercase(),
-                isDaemonConnected = routerState is com.artier.ide.data.model.RouterState.Connected,
+                isDaemonConnected = routerState.isRunning,
                 onDaemonClick = { state.toggleRightPanel(RightPanelType.AI) },
                 onTerminalClick = { state.onBottomTabClick(BottomPanelTab.TERMINAL) },
                 onSettingsClick = { /* Open settings */ }

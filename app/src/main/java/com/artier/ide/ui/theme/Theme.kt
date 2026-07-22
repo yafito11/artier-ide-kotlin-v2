@@ -130,6 +130,7 @@ object ArtierColors {
     val success get() = SuccessGreen
     val warning get() = WarningYellow
     val info get() = InfoBlue
+    val error get() = ErrorRed
     val editorBackground get() = EditorBackground
     val terminalBackground get() = TerminalBackground
 }
