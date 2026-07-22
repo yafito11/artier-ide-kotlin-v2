@@ -5,8 +5,11 @@ import com.artier.ide.data.remote.DaemonApi
 import com.artier.ide.data.remote.DaemonClient
 import com.artier.ide.data.remote.LspClient
 import com.artier.ide.data.remote.WebSocketClient
+import com.artier.ide.data.repository.ChatRepository
+import com.artier.ide.data.repository.DatabaseRepository
 import com.artier.ide.data.repository.EditorRepository
 import com.artier.ide.data.repository.FileRepository
+import com.artier.ide.data.repository.SkillRepository
 import com.artier.ide.proot.DaemonManager
 import com.artier.ide.proot.ProotManager
 import com.artier.ide.proot.SystemInitializer

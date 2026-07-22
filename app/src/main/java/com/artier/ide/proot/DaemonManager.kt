@@ -224,8 +224,8 @@ class DaemonManager(
             });
             
             server.listen(PORT, '127.0.0.1', () => {
-                console.log(`[Daemon] Server running on http://127.0.0.1:${PORT}`);
-                console.log(`[Daemon] WebSocket available on ws://127.0.0.1:${PORT}`);
+                console.log(`[Daemon] Server running on http://127.0.0.1:${'$'}{PORT}`);
+                console.log(`[Daemon] WebSocket available on ws://127.0.0.1:${'$'}{PORT}`);
             });
             
             process.on('SIGTERM', () => {

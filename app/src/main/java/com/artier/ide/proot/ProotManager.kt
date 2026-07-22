@@ -185,10 +185,15 @@ class ProotManager(private val context: Context) {
             extractTarGz(tarGzFile, File(rootfsPath))
         } else {
             // Check assets for rootfs directory
-            val assetRootfs = File(context.assets, ROOTFS_DIR)
-            if (assetRootfs.exists()) {
-                copyAssetDirectory(ROOTFS_DIR, File(rootfsPath))
-            } else {
+            try {
+                val assetFiles = context.assets.list(ROOTFS_DIR)
+                if (assetFiles != null && assetFiles.isNotEmpty()) {
+                    copyAssetDirectory(ROOTFS_DIR, File(rootfsPath))
+                } else {
+                    // Create minimal rootfs
+                    createMinimalRootfs()
+                }
+            } catch (e: Exception) {
                 // Create minimal rootfs
                 createMinimalRootfs()
             }
