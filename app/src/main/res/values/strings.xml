@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Artier IDE</string>
+    <string name="toggle_sidebar">Toggle Sidebar</string>
+    <string name="toggle_terminal">Toggle Terminal</string>
+    <string name="toggle_ai_panel">Toggle AI Panel</string>
+    <string name="open_project">Open Project</string>
+    <string name="new_terminal">New Terminal</string>
+    <string name="clear_terminal">Clear Terminal</string>
+    <string name="save_file">Save File</string>
+    <string name="close_tab">Close Tab</string>
+    <string name="new_tab">New Tab</string>
+    <string name="file_explorer">File Explorer</string>
+    <string name="terminal">Terminal</string>
+    <string name="ai_assistant">AI Assistant</string>
+    <string name="no_project_open">No project open</string>
+    <string name="open_file_to_edit">Open a file to start editing</string>
+    <string name="no_terminal_session">No terminal session. Click + to start.</string>
+    <string name="ai_features_coming">AI features coming in Phase 4</string>
+    <string name="rename">Rename</string>
+    <string name="delete">Delete</string>
+    <string name="new_file">New File</string>
+    <string name="new_folder">New Folder</string>
+    <string name="cancel">Cancel</string>
+    <string name="create">Create</string>
+    <string name="rename_file">Rename File</string>
+    <string name="file_name">File name</string>
+    <string name="name">Name</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ==================== OBSIDIAN LOGIC DESIGN SYSTEM ==================== -->
+    
+    <!-- Primary: 9Router Purple -->
+    <color name="primary">#FFD4BBFF</color>
+    <color name="on_primary">#FF3F0F81</color>
+    <color name="primary_container">#FF7E57C2</color>
+    
+    <!-- Secondary: Kotlin Orange -->
+    <color name="secondary">#FFFFB875</color>
+    <color name="on_secondary">#FF4B2800</color>
+    <color name="secondary_container">#FFE08100</color>
+    
+    <!-- Tertiary: Jetpack Blue -->
+    <color name="tertiary">#FF9FCAFF</color>
+    <color name="on_tertiary">#FF003258</color>
+    <color name="tertiary_container">#FF0070BC</color>
+    
+    <!-- Error -->
+    <color name="error">#FFFFB4AB</color>
+    <color name="on_error">#FF690005</color>
+    
+    <!-- Surface Hierarchy -->
+    <color name="surface_obsidian">#FF0A0A0A</color>
+    <color name="surface_charcoal">#FF1E1E1E</color>
+    <color name="surface_edge">#FF2D2D2D</color>
+    <color name="surface">#FF131313</color>
+    <color name="surface_container">#FF201F1F</color>
+    <color name="surface_container_high">#FF2A2A2A</color>
+    <color name="surface_container_highest">#FF353534</color>
+    
+    <!-- Text Colors -->
+    <color name="on_surface">#FFE5E2E1</color>
+    <color name="on_surface_variant">#FFCCC3D3</color>
+    <color name="text_muted">#FFA0A0A0</color>
+    <color name="text_high_contrast">#FFF5F5F5</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent_router_purple">#FF9C27B0</color>
+    <color name="accent_kotlin_orange">#FFF88909</color>
+    <color name="accent_jetpack_blue">#FF4285F4</color>
+    
+    <!-- Semantic Colors -->
+    <color name="success_green">#FF4CAF50</color>
+    <color name="warning_yellow">#FFEB3B</color>
+    <color name="info_blue">#FF2196F3</color>
+    
+    <!-- Editor Colors -->
+    <color name="editor_background">#FF0A0A0A</color>
+    <color name="editor_text">#FFE5E2E1</color>
+    <color name="editor_line_number">#FF858585</color>
+    <color name="editor_selection">#FF264F78</color>
+    <color name="editor_current_line">#FF2A2D2E</color>
+    <color name="editor_bracket_match">#FF3E3D32</color>
+    
+    <!-- Terminal Colors -->
+    <color name="terminal_background">#FF0A0A0A</color>
+    <color name="terminal_text">#FFE5E2E1</color>
+    <color name="terminal_cursor">#FFE5E2E1</color>
+    
+    <!-- File Icon Colors -->
+    <color name="file_icon_kotlin">#FF7C4DFF</color>
+    <color name="file_icon_java">#FFFF5722</color>
+    <color name="file_icon_python">#FF4CAF50</color>
+    <color name="file_icon_javascript">#FFFFEB3B</color>
+    <color name="file_icon_typescript">#FF2196F3</color>
+    <color name="file_icon_html">#FFFF5722</color>
+    <color name="file_icon_css">#FF2196F3</color>
+    <color name="file_icon_json">#FF4CAF50</color>
+    <color name="file_icon_markdown">#FF9E9E9E</color>
+    <color name="file_icon_sql">#FFFF9800</color>
+    <color name="file_icon_shell">#FF4CAF50</color>
+</resources>

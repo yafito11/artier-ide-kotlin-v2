@@ -1,0 +1,19 @@
+# DevContainer cache directories
+.devcontainer/cache/
+
+# ReDroid data
+.redroid/
+
+# Test reports
+test-reports/
+
+# Gradle caches
+.gradle/
+build/
+
+# Android caches
+.android/
+
+# IDE files
+.idea/
+*.iml

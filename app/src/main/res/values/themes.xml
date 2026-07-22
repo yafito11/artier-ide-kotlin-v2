@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base theme - Dark only (Obsidian Logic) -->
+    <style name="Theme.ArtierIDE" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Primary: 9Router Purple -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        
+        <!-- Secondary: Kotlin Orange -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        
+        <!-- Tertiary: Jetpack Blue -->
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/tertiary_container</item>
+        
+        <!-- Error -->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+        
+        <!-- Background & Surface -->
+        <item name="android:colorBackground">@color/surface</item>
+        <item name="colorOnBackground">@color/on_surface</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_edge</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+        
+        <!-- System Bars -->
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:navigationBarColor">@color/surface_obsidian</item>
+    </style>
+    
+    <!-- No Action Bar variant -->
+    <style name="Theme.ArtierIDE.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <!-- Splash Screen theme -->
+    <style name="Theme.ArtierIDE.Splash" parent="Theme.ArtierIDE">
+        <item name="android:windowBackground">@color/surface_obsidian</item>
+    </style>
+</resources>

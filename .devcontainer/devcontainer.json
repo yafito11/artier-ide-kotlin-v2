@@ -1,0 +1,66 @@
+{
+  "name": "Artier IDE - Android Dev (ReDroid)",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspace",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+
+  "forwardPorts": [
+    5555,
+    5037,
+    8080,
+    3000
+  ],
+
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  
+  "postStartCommand": "bash .devcontainer/start-emulator.sh",
+
+  "remoteEnv": {
+    "ANDROID_HOME": "/opt/android-sdk",
+    "ANDROID_SDK_ROOT": "/opt/android-sdk",
+    "JAVA_HOME": "/usr/lib/jvm/java-17-openjdk-amd64",
+    "PATH": "${containerEnv:PATH}:/opt/android-sdk/cmdline-tools/latest/bin:/opt/android-sdk/platform-tools"
+  },
+
+  "mounts": [
+    "source=${localWorkspaceFolder}/.devcontainer/cache,target=/workspace/.devcontainer/cache,type=bind,consistency=cached"
+  ],
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mathiasfrohlich.Kotlin",
+        "niclas-olofsson.android-dev-ext",
+        "naco-siren.gradle-language",
+        "square.okta-gradle",
+        "dear-github.dear-github",
+        "github.vscode-pull-request-github",
+        "mhutchie.git-graph",
+        "streetsidesoftware.code-spell-checker",
+        "editorconfig.editorconfig"
+      ],
+      "settings": {
+        "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64",
+        "kotlin.compiler.jvm.target": "17",
+        "gradle.nestedCommandLine": "",
+        "files.watcherExclude": {
+          "**/build/**": true,
+          "**/.gradle/**": true,
+          "**/node_modules/**": true
+        }
+      }
+    }
+  },
+
+  "remoteUser": "vscode"
+}

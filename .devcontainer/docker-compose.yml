@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  # ReDroid - Android emulator in Docker
+  redroid:
+    image: redroid/redroid:14.0.0-latest
+    container_name: artier-redroid
+    privileged: true
+    ports:
+      - "5555:5555"
+    volumes:
+      - redroid-data:/data
+      - ./cache/redroid:/root/.redroid
+    environment:
+      - REDROID_BOOT_PROPERTIES=ro.boot.hardware.redroid=1
+      - REDROID_BOOT_PROPERTIES=ro.hardware=redroid
+      - REDROID_BOOT_PROPERTIES=ro.product.model=Artier_Tablet
+      - REDROID_BOOT_PROPERTIES=ro.product.device=artier
+      - REDROID_BOOT_PROPERTIES=ro.build.display.id=Artier-IDE-Dev
+      - REDROID_BOOT_PROPERTIES=ro.build.version.sdk=34
+      - REDROID_BOOT_PROPERTIES=ro.build.version.release=14
+      - REDROID_BOOT_PROPERTIES=ro.build.version.security_patch=2024-01-01
+      - REDROID_BOOT_PROPERTIES=ro.product.cpu.abi=arm64-v8a
+      - REDROID_BOOT_PROPERTIES=ro.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi
+      - REDROID_BOOT_PROPERTIES=ro.product.cpu.abilist64=arm64-v8a
+      - REDROID_BOOT_PROPERTIES=ro.product.cpu.abilist32=armeabi-v7a,armeabi
+      - REDROID_BOOT_PROPERTIES= dalvik.vm.heapsize=512m
+      - REDROID_BOOT_PROPERTIES= dalvik.vm.heapgrowthlimit=256m
+      - REDROID_BOOT_PROPERTIES= dalvik.vm.heapmaxfree=8m
+      - REDROID_BOOT_PROPERTIES= dalvik.vm.heapminfree=4m
+      - REDROID_BOOT_PROPERTIES= dalvik.vm.heaptargetutilization=0.75
+      - REDROID_GPU_MODE=guest
+    networks:
+      - redroid-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "adb", "shell", "echo", "ok"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+  # Dev container for development
+  devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: artier-devcontainer
+    depends_on:
+      redroid:
+        condition: service_healthy
+    volumes:
+      - ..:/workspace:cached
+      - ./cache/gradle:/home/vscode/.gradle
+      - ./cache/android:/home/vscode/.android
+      - ./cache/redroid-adb:/tmp/redroid-adb
+    ports:
+      - "5037:5037"
+      - "8080:8080"
+      - "3000:3000"
+    environment:
+      - REDROID_HOST=redroid
+      - REDROID_PORT=5555
+      - ANDROID_HOME=/opt/android-sdk
+      - ANDROID_SDK_ROOT=/opt/android-sdk
+    networks:
+      - redroid-net
+    privileged: true
+    command: sleep infinity
+
+networks:
+  redroid-net:
+    driver: bridge
+
+volumes:
+  redroid-data:
+    driver: local
