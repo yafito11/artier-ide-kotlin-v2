@@ -4,8 +4,11 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.artier.ide.data.model.EditorTab
 import com.artier.ide.data.model.FileNode
+import com.artier.ide.data.model.FileNode.Companion.getName
+import com.artier.ide.data.remote.LspClient
 import com.artier.ide.data.repository.EditorRepository
 import com.artier.ide.data.repository.FileRepository
+import com.artier.ide.ui.editor.EditorViewModel
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
@@ -146,6 +149,9 @@ class ArtierIDEInstrumentedTest {
             )
         )
 
+        // Set the file tree on the repository
+        repository.setFileTree(root)
+
         // Test search
         val results = repository.searchFiles("main")
         assertEquals(1, results.size)
@@ -165,7 +171,8 @@ class ArtierIDEInstrumentedTest {
 
     @Test
     fun testEditorViewModel() {
-        val viewModel = EditorViewModel(editorRepository, fileRepository)
+        val mockLspClient = MockLspClient()
+        val viewModel = EditorViewModel(editorRepository, fileRepository, mockLspClient)
 
         // Open file
         viewModel.openFile("/test/file.kt")
@@ -196,4 +203,8 @@ class MockWebSocketClient : com.artier.ide.data.remote.WebSocketClient() {
     override fun disconnect() {
         isConnected = false
     }
+}
+
+class MockLspClient : com.artier.ide.data.remote.LspClient(MockWebSocketClient()) {
+    // Mock implementation - uses defaults from parent
 }
