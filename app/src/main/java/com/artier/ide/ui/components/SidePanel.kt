@@ -70,7 +70,7 @@ fun SidePanel(
 }
 
 @Composable
-fun PanelAction IconButton(
+fun PanelActionButton(
     onClick: () -> Unit,
     contentDescription: String,
     modifier: Modifier = Modifier,
