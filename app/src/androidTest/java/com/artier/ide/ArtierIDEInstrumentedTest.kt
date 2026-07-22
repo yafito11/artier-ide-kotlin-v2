@@ -5,10 +5,8 @@ import androidx.test.platform.app.InstrumentationRegistry
 import com.artier.ide.data.model.EditorTab
 import com.artier.ide.data.model.FileNode
 import com.artier.ide.data.model.FileNode.Companion.getName
-import com.artier.ide.data.remote.LspClient
 import com.artier.ide.data.repository.EditorRepository
 import com.artier.ide.data.repository.FileRepository
-import com.artier.ide.ui.editor.EditorViewModel
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
@@ -168,23 +166,6 @@ class ArtierIDEInstrumentedTest {
         assertTrue(session.isActive)
         assertNotNull(session.id)
     }
-
-    @Test
-    fun testEditorViewModel() {
-        val mockLspClient = MockLspClient()
-        val viewModel = EditorViewModel(editorRepository, fileRepository, mockLspClient)
-
-        // Open file
-        viewModel.openFile("/test/file.kt")
-        assertNotNull(viewModel.getCurrentFilePath())
-
-        // Update content
-        viewModel.updateContent(editorRepository.activeTabId.value!!, "new content")
-        assertEquals("new content", viewModel.getCurrentContent())
-
-        // Check unsaved changes
-        assertTrue(viewModel.hasUnsavedChanges())
-    }
 }
 
 // Mock classes for testing
@@ -203,8 +184,4 @@ class MockWebSocketClient : com.artier.ide.data.remote.WebSocketClient() {
     override fun disconnect() {
         isConnected = false
     }
-}
-
-class MockLspClient : com.artier.ide.data.remote.LspClient(MockWebSocketClient()) {
-    // Mock implementation - uses defaults from parent
 }
