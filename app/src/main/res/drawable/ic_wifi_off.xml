@@ -9,5 +9,5 @@
         android:pathData="M12 20h.01M8.29 6.18A11 11 0 0 1 19.08 9M1.42 9a16 16 0 0 1 4.58-2.58M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01M2 2l20 20"
         android:strokeWidth="2"
         android:strokeColor="@android:color/white"
-        android:fillColor="none" />
+        android:fillColor="@android:color/transparent" />
 </vector>

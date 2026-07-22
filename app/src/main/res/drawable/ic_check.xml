@@ -9,5 +9,5 @@
         android:pathData="M20 6 9 17l-5-5"
         android:strokeWidth="2"
         android:strokeColor="@android:color/white"
-        android:fillColor="none" />
+        android:fillColor="@android:color/transparent" />
 </vector>
