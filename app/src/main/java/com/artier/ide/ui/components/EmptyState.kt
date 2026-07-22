@@ -4,7 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Code
-import androidx.compose.material.icons.filled.GitBranch
+import androidx.compose.material.icons.filled.AccountTree
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SmartToy
 import androidx.compose.material.icons.filled.Terminal
@@ -152,7 +152,7 @@ fun GitEmptyState(
     modifier: Modifier = Modifier
 ) {
     EmptyState(
-        icon = androidx.compose.material.icons.Icons.Filled.GitBranch,
+        icon = androidx.compose.material.icons.Icons.Filled.AccountTree,
         title = "No Git repository",
         subtitle = "Open a folder with a Git repository to view changes",
         modifier = modifier

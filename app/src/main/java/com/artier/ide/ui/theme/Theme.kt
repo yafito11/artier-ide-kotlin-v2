@@ -31,10 +31,6 @@ private val DarkColorScheme = darkColorScheme(
     onSurface = OnSurface,
     surfaceVariant = SurfaceEdge,
     onSurfaceVariant = OnSurfaceVariant,
-    surfaceContainerLow = SurfaceContainer,
-    surfaceContainer = SurfaceContainer,
-    surfaceContainerHigh = SurfaceContainerHigh,
-    surfaceContainerHighest = SurfaceContainerHighest,
     outline = SurfaceEdge,
     outlineVariant = SurfaceContainerHigh
 )

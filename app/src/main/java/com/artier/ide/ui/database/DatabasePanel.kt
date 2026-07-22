@@ -38,7 +38,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilterChip
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -181,7 +181,7 @@ fun DatabasePanel(
             }
         }
 
-        HorizontalDivider()
+        Divider()
 
         // Main content: split view
         Row(
@@ -224,12 +224,12 @@ fun DatabasePanel(
 
                 // Schema for selected table
                 if (state.selectedTable != null) {
-                    HorizontalDivider()
+                    Divider()
                     SchemaView(table = state.selectedTable!!)
                 }
             }
 
-            HorizontalDivider()
+            Divider()
 
             // Right: Query editor + Results
             Column(
@@ -245,7 +245,7 @@ fun DatabasePanel(
                     isLoading = state.isLoading
                 )
 
-                HorizontalDivider()
+                Divider()
 
                 // Results grid
                 if (state.queryResult != null) {
@@ -476,7 +476,7 @@ private fun ResultGrid(result: QueryResult) {
             }
         }
 
-        HorizontalDivider()
+        Divider()
 
         // Data rows
         LazyColumn(modifier = Modifier.weight(1f)) {

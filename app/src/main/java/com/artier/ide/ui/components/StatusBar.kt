@@ -53,7 +53,7 @@ fun StatusBar(
         ) {
             // Branch indicator
             StatusBarItem(
-                icon = Icons.Filled.GitBranch,
+                icon = Icons.Filled.AccountTree,
                 label = "main",
                 onClick = { }
             )
